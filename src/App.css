@@ -1,6 +1,11 @@
 .App {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-color: #f3f4f6;
   background-repeat: repeat;
+  background-size: cover;
+}
+li,
+p {
+  font-family: "Didact Gothic", sans-serif;
 }

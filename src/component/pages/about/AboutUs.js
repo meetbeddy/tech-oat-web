@@ -71,7 +71,7 @@ display:inline-flex;
   height:auto;
   display:flex;
   flex-direction:column;
-  margin:5px;
+  margin:5px 10px 5px 5px;
   
 }
 .missionstmt{
@@ -80,10 +80,20 @@ display:inline-flex;
     border:1px solid silver;
     border-radius:30px 0px 30px 0px;
     background-color:rgb(155,173,173,0.2);
-    box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.35);
+   
     margin:5px;
     padding:10px;
     text-align:center;
+    :hover{
+      box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.35);
+    }
+    ul{
+      list-style-type: circle;
+      list-style-position: inside;
+      margin: 0;
+      padding: 0;
+      
+    }
 }
 .membersect{
   width:100%;
@@ -91,7 +101,12 @@ display:inline-flex;
   display:block;
   text-align:left;
   color:black;
-  margin:10px;
+  margin-top:10px;
+   p#phone{
+    margin:0;
+    background-color:rgb(0,0,0,0.2);
+    font-weight:600;
+  }
 
   h4 {
     font-family: "Fredoka One", cursive;
@@ -101,10 +116,7 @@ display:inline-flex;
     letter-spacing: 0.2em;
    
   }
-  button{
-    border:none;
-
-  }
+  
 }
 .membertitle{
   background-color:rgb(155,173,173,0.2);
@@ -170,11 +182,11 @@ h1{
   margin:10px 0 0;
   
 }
-.profile{
-  text-align:center;
-  width:auto;
+// .profile{
+//   text-align:center;
+//   width:auto;
  
-}
+// }
 img{
   width:25vw;
 }
@@ -208,8 +220,7 @@ const AboutUs = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur alias laborum architecto in quae provident veritatis
-            earum, dolor a voluptas cum quaerat porro veniam illo rem commodi
-            fugiat debitis doloribus?
+            earum.
           </p>
         </motion.div>
         <motion.div
@@ -224,12 +235,12 @@ const AboutUs = () => {
           }}
         >
           <h4>Our Services</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur alias laborum architecto in quae provident veritatis
-            earum, dolor a voluptas cum quaerat porro veniam illo rem commodi
-            fugiat debitis doloribus?
-          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit,</li>
+            <li>Lorem ipsum dolor sit,</li>
+            <li>Lorem ipsum dolor sit,</li>
+            <li>Lorem ipsum dolor sit,</li>
+          </ul>
         </motion.div>
       </div>
 
@@ -260,13 +271,18 @@ const AboutUs = () => {
           <div className="sect">
             <div className="profile">
               <img src="/images/person2.jpg" alt="chieftech" />
-
               <div className="social">
                 <SocialMediaCard />{" "}
               </div>
-
               <h5>Oluwasegun Aluko Timothy</h5>
-              <p> CEO/Chief Tech</p>
+              <p id="phone"> CEO/Chief Tech</p>
+              <p id="phone">
+                <i className="fas fa-phone-square"></i>
+                {""}
+                {""}
+                {""}
+                07064492675
+              </p>
             </div>
             <div className="profiletext">
               <p>

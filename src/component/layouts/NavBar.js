@@ -12,6 +12,7 @@ const Styles = styled(motion.div)`
     :hover {
       background: #d8d2d4;
       border-radius: 5px;
+      box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.35);
     }
   }
   .navbar-nav,
@@ -41,6 +42,9 @@ const Styles = styled(motion.div)`
     }
     &:hover {
       background: none;
+      :hover {
+        box-shadow: none;
+      }
     }
     @media (max-width: 768px) {
       width: auto;

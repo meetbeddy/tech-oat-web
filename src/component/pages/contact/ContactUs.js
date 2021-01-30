@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactForm";
 import Card from "./Card";
 import Map from "../../map/Map";
@@ -44,6 +44,16 @@ const location = {
 };
 function ContactUs() {
   const [isShown, SetIsShown] = useState(false);
+  const [isMobile, setIsmobile] = useState(false);
+
+  useEffect(() => {
+    const detect = () => {
+      setIsmobile(
+        !!navigator.maxTouchPoints && window.PointerEvent ? true : false
+      );
+    };
+    window.addEventListener("resize", detect);
+  });
 
   const handleShown = () => {
     SetIsShown(isShown === true);
@@ -61,7 +71,7 @@ function ContactUs() {
           onMouseLeave={handleNotShown}
           style={{ cursor: "pointer" }}
         >
-          {isShown === true ? (
+          {isShown === true && !isMobile ? (
             <motion.div
               initial={{ opacity: 0, x: "10vh" }}
               animate={{ opacity: 1, x: 0 }}
@@ -77,6 +87,7 @@ function ContactUs() {
           ) : (
             <img src="/images/contactus.svg" alt="contact" />
           )}
+          {isMobile ? <Card location={location} /> : null}
         </div>
         <div className="map">
           {" "}
