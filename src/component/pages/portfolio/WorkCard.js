@@ -5,9 +5,10 @@ const StyledContainer = styled.div`
 width:100%,
 height:100%,
 margin:auto;
+box-sizing:border-box;
  transition: all .2s ease-in-out; 
-:hover{
-  transform: scale(1.5,1.5);
+img:hover{
+  transform: scale(2,2);
 }
 
 

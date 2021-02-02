@@ -86,6 +86,8 @@ export default class Images extends Component {
   height:100%,
   margin:auto;
   text-align:center;
+  box-sizing:border-box;
+
   h4 {
     font-family: "Pacifico", cursive;
     font-size: 32px;
